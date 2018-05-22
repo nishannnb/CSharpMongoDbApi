@@ -1,2 +1,2 @@
-# CSharpMongoDbApi
-CSharpMongoDbApi
+# DotNetCoreCSharpMongoDbApi
+DotNetCoreCSharpMongoDbApi
