@@ -32,41 +32,63 @@ namespace CSharpMongoDbApi.Controllers
 			return await _productService.GetAllProducts();
 		}
 
+		[HttpGet]
+		[Route("api/Product/GetProductById/{id}")]
+		public async Task<Product> GetProductById(int id)
+		{
+			return await _productService.GetProductById(id);
+		}
+
+		[HttpPost]
+		[Route("api/Product/SaveProduct")]
+		public async Task<bool> SaveProduct([FromBody]Product product)
+		{
+			var result = await _productService.SaveProduct(product);
+			if (result)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		[HttpPut]
+		[Route("api/Product/UpdateProduct")]
+		public async Task<bool> UpdateProduct([FromBody]Product product)
+		{
+			if (product == null)
+			{
+				return false;
+			}
+
+			var result = await _productService.UpdateProduct(product);
+			if (result)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		[HttpDelete]
+		[Route("api/Product/DeleteProduct/{id}")]
+		public async Task<bool> DeleteProduct(int id)
+		{
+			var result = await _productService.DeleteProduct(id);
+			if (result)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 
 
-
-
-
-		//// GET api/values
-		//[HttpGet]
-		//public IEnumerable<string> Get()
-		//{
-		//	return new string[] { "value1", "value2" };
-		//}
-
-		//// GET api/values/5
-		//[HttpGet("{id}")]
-		//public string Get(int id)
-		//{
-		//	return "value";
-		//}
-
-		//// POST api/values
-		//[HttpPost]
-		//public void Post([FromBody]string value)
-		//{
-		//}
-
-		//// PUT api/values/5
-		//[HttpPut("{id}")]
-		//public void Put(int id, [FromBody]string value)
-		//{
-		//}
-
-		//// DELETE api/values/5
-		//[HttpDelete("{id}")]
-		//public void Delete(int id)
-		//{
-		//}
 	}
 }
