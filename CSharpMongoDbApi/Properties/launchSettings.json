@@ -8,18 +8,18 @@
     }
   },
   "profiles": {
-    "IIS Express": {
+			"IIS Express": {
+				"commandName": "IISExpress",
+				"launchBrowser": true,
+				"launchUrl": "api/Product",
+				"environmentVariables": {
+					"ASPNETCORE_ENVIRONMENT": "Development"
+				}
+			},
+    "CSharpMongoDbApi": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "CSharpMongoDbApi": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/Product",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
