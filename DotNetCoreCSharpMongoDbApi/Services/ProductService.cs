@@ -21,7 +21,17 @@ namespace CSharpMongoDbApi.Services
 
 		public async Task<List<Product>> GetAllProducts()
 		{
-			return await _mongoRepo.product.Find(x => x.ActiveStatus == true).ToListAsync();
+			try
+			{
+				var filter = Builders<Product>.Filter.Eq("ProductName", "Acer");
+				return await _mongoRepo.product.Find(filter).ToListAsync();
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+
 		}
 
 

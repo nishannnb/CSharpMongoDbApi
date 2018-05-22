@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CSharpMongoDbApi.Controllers
 {
-	[Route("api/Product")]
+	//[Route("api/Product")]
 	public class ProductController : Controller
 	{
 		private readonly IProductService _productService = null;
@@ -19,7 +19,14 @@ namespace CSharpMongoDbApi.Controllers
 		}
 
 		[HttpGet]
-		//[Route("api/Product/GetAllProducts")]
+		[Route("api/Product")]
+		public string ProductApi()
+		{
+			return "Product Api Working";
+		}
+
+		[HttpGet]
+		[Route("api/Product/GetAllProducts")]
 		public async Task<List<Product>> GetAllProducts()
 		{
 			return await _productService.GetAllProducts();
