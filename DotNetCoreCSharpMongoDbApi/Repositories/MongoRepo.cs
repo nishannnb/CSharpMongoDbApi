@@ -1,4 +1,4 @@
-﻿using DotNetCoreCSharpMongoDbApi.Model;
+﻿using DotNetCoreCSharpMongoDbApi.Models;
 using DotNetCoreCSharpMongoDbApi;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotNetCoreCSharpMongoDbApi.Repository
+namespace DotNetCoreCSharpMongoDbApi.Repositories
 {
 	public class MongoRepo
 	{

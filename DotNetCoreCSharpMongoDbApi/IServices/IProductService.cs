@@ -1,4 +1,4 @@
-﻿using DotNetCoreCSharpMongoDbApi.Model;
+﻿using DotNetCoreCSharpMongoDbApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,4 @@
-﻿using DotNetCoreCSharpMongoDbApi.Model;
+﻿using DotNetCoreCSharpMongoDbApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;

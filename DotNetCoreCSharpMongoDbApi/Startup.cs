@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotNetCoreCSharpMongoDbApi.IServices;
-using DotNetCoreCSharpMongoDbApi.Model;
+using DotNetCoreCSharpMongoDbApi.Models;
 using DotNetCoreCSharpMongoDbApi.Services;
 using DotNetCoreCSharpMongoDbApi;
 using Microsoft.AspNetCore.Builder;

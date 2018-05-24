@@ -1,6 +1,6 @@
 ﻿using DotNetCoreCSharpMongoDbApi.IServices;
-using DotNetCoreCSharpMongoDbApi.Model;
-using DotNetCoreCSharpMongoDbApi.Repository;
+using DotNetCoreCSharpMongoDbApi.Models;
+using DotNetCoreCSharpMongoDbApi.Repositories;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;

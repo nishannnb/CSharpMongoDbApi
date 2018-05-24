@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotNetCoreCSharpMongoDbApi.Model
+namespace DotNetCoreCSharpMongoDbApi.Models
 {
 	////startup without context
 	public class Setting
