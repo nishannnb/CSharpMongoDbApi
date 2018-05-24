@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CSharpMongoDbApi.Model
+namespace DotNetCoreCSharpMongoDbApi.Model
 {
-    public class Setting
-    {
+	////startup without context
+	public class Setting
+	{
 		public string ConnectionString { get; set; }
 
 		public string Database { get; set; }

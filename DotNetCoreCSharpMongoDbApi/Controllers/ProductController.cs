@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CSharpMongoDbApi.IServices;
-using CSharpMongoDbApi.Model;
+using DotNetCoreCSharpMongoDbApi.IServices;
+using DotNetCoreCSharpMongoDbApi.Model;
+using DotNetCoreCSharpMongoDbApi;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CSharpMongoDbApi.Controllers
+namespace DotNetCoreCSharpMongoDbApi.Controllers
 {
-	//[Route("api/Product")]
 	public class ProductController : Controller
 	{
 		private readonly IProductService _productService = null;
+
 
 		public ProductController(IProductService productService)
 		{
@@ -43,7 +44,7 @@ namespace CSharpMongoDbApi.Controllers
 		[Route("api/Product/SaveProduct")]
 		public async Task<bool> SaveProduct([FromBody]Product product)
 		{
-			var result = await _productService.SaveProduct(product);
+			var result = await _productService.InsertOneProduct(product);
 			if (result)
 			{
 				return true;
@@ -63,7 +64,7 @@ namespace CSharpMongoDbApi.Controllers
 				return false;
 			}
 
-			var result = await _productService.UpdateProduct(product);
+			var result = await _productService.UpdateOneProduct(product);
 			if (result)
 			{
 				return true;
@@ -78,7 +79,7 @@ namespace CSharpMongoDbApi.Controllers
 		[Route("api/Product/DeleteProduct/{id}")]
 		public async Task<bool> DeleteProduct(int id)
 		{
-			var result = await _productService.DeleteProduct(id);
+			var result = await _productService.DeleteOneProduct(id);
 			if (result)
 			{
 				return true;
